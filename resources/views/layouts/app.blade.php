@@ -75,6 +75,7 @@
 
         <div class="container mt-5">
             @include('layouts.alert.alert_succes')
+            @include('layouts.alert.alert_failed')
         </div>
 
         <main class="py-4">

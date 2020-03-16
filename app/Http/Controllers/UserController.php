@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         $user = User::where('token_activation', $request->otp)->first();
         if ($user == null) {
-            return redirect()->back()->withSuccess('OTP salah Silahkan cek Kembali !!');
+            return redirect()->back()->withOtp('OTP salah Silahkan cek Kembali !!');
         } else {
             $user->update([
                 'isverified' => true,
