@@ -22,3 +22,4 @@ Route::get('/verification', 'UserController@verification')->name('verification')
 Route::post('/post/verification', 'UserController@postVerification');
 
 Route::post('/post/resend', 'UserController@postResend');
+Route::get('/resend/direct/{otp}', 'UserController@postResendDirect');
