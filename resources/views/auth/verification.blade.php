@@ -8,7 +8,7 @@
                 <div class="card-header">Verification OTP</div>
 
                 <div class="card-body">
-                    <form method="POST" action="">
+                    <form method="POST" action="/post/verification">
                         @csrf
 
                         <div class="form-group row">
