@@ -52,13 +52,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form method="POST" action="{{url('/post/resend')}}">
+                    @csrf
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Send</button>
+                        <button type="submit" class="btn btn-primary">Send</button>
                     </div>
                 </form>
             </div>

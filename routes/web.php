@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/verification', 'UserController@verification')->name('verification');
 Route::post('/post/verification', 'UserController@postVerification');
+
+Route::post('/post/resend', 'UserController@postResend');
