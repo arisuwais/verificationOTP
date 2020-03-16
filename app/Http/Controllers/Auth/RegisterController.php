@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use App\Events\Auth\UserActivationEmail;
 
 class RegisterController extends Controller
 {
@@ -75,6 +76,9 @@ class RegisterController extends Controller
 
     protected function registered(Request $request, $user)
     {
+        //send mail
+        event(new UserActivationEmail($user));
+
         $this->guard()->logout();
         return redirect()->route('login')->withSuccess('Registrasi Berhasil, Silahkan Cek Email Untuk Aktivasi');
     }
