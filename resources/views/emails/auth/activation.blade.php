@@ -1,8 +1,11 @@
 @component('mail::message')
 # Activatin Email
 
-Berikut kode OTP anda XXXXXXXX,
-silahakan masukan kode OTP tersebut untuk verifikasi
+Hi {{$user->name}}
+
+Berikut kode OTP anda <b> {{$user->token_activation}} </b> <br>
+silahakan masukan kode OTP tersebut
+untuk verifikasi akun anda.
 
 @component('mail::button', ['url' => ''])
 Active
